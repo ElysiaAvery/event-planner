@@ -7,12 +7,6 @@ public class Event {
   private int mMeal = 25;
   private int mEntertainment = 250;
 
-  // public Event(int person, int meal, int entertainment) {
-  //   mPerson = person;
-  //   mMeal = meal;
-  //   mEntertainment = entertainment;
-  // }
-
   public int initialCost(int userChoice) {
     // return mBase.equals(mCost + userChoice);
     return 250;
