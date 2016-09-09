@@ -21,13 +21,10 @@ public class App {
         String mealChoice = c.readLine().trim().toLowerCase();
         if (mealChoice.equals("nebrie grub cheese and plant tendrils")) {
           System.out.println("Each plate will cost $10. Please type 10 to confirm.");
-          Integer userMealChoice = Integer.parseInt(c.readLine().trim());
         } else if (mealChoice.equals("uramaj and urnol's healing feast")) {
           System.out.println("Each plate will cost $15. Please type 15 to confirm.");
-          Integer userMealChoice = Integer.parseInt(c.readLine().trim());
         } else if (mealChoice.equals("skekmal's freshly hunted meats")) {
           System.out.println("Each plate will cost $20. Please type 20 to confirm.");
-          Integer userMealChoice = Integer.parseInt(c.readLine().trim());
         } else {
           System.out.println("I'm sorry, I didn't understand your input.");
         }
@@ -36,16 +33,12 @@ public class App {
         String entertainmentChoice = c.readLine().trim().toLowerCase();
         if (entertainmentChoice.equals("urru band")) {
           System.out.println("This band plays for free, please enter 0 to confirm.");
-          Integer userChoiceEntertainment = Integer.parseInt(c.readLine().trim());
         } else if (entertainmentChoice.equals("pod people dj")) {
           System.out.println("This band plays for $100, please enter 100 to confirm.");
-          Integer userChoiceEntertainment = Integer.parseInt(c.readLine().trim());
         } else if (entertainmentChoice.equals("skeksis noise drone")) {
           System.out.println("This band plays for $500, please enter 500 to confirm.");
-          Integer userChoiceEntertainment = Integer.parseInt(c.readLine().trim());
         } else if (entertainmentChoice.equals("garthrim dancers")) {
           System.out.println("This band plays for $200, please enter 200 to confirm.");
-          Integer userChoiceEntertainment = Integer.parseInt(c.readLine().trim());
         } else {
           System.out.println("I'm sorry, I didn't understand your input.");
         }
