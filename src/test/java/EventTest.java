@@ -22,9 +22,9 @@ public class EventTest{
   }
 
   @Test
-  public void costPerMeal_increasesCostBasedOnFood_userMealChoice() {
+  public void costPerMeal_increasesCostBasedOnFood_15() {
     Event userEvent = new Event();
-    assertEquals(userMealChoice, userEvent.costPerMeal(userMealChoice));
+    assertEquals(15, userEvent.costPerMeal(15));
   }
 
   @Test
