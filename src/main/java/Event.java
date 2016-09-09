@@ -30,6 +30,6 @@ public class Event {
 
   public int costPerEntertainment(int entertainmentSelection) {
     // returnmBase.equals(entertainmentSelection.mEntertainment;
-    return 0;
+    return 250;
   }
 }
