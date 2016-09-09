@@ -14,10 +14,28 @@ public class App {
       System.out.println("Let's begin planning your party! How many people are you planning on having attend?");
       int totalPeopleSelection = Integer.parseInt(c.readLine());
       System.out.println("What type of meal would you like to be served? Please type one of the following: Nebrie Grub Cheese and Plant Tendrils, urAmaj and urNol's Healing Feast, or skekMal's Freshly Hunted Meats");
-      int userMealChoice = Integer.parseInt(c.readLine().trim().toLowerCase());
-      System.out.println("What type of entertainment would you like at your event?");
+      String mealChoice = c.readLine().trim().toLowerCase();
+      if (mealChoice.equals("nebrie grub cheese and plant tendrils")) {
+        System.out.println("Each plate will cost $10. Please type 10 to confirm.");
+        Integer userMealChoice = Integer.parseInt(c.readLine().trim());
+      } else if (mealChoice.equals("urmaj and urnol's healing feast")) {
+        System.out.println("Each plate will cost $15. Please type 15 to confirm.");
+        Integer userMealChoice = Integer.parseInt(c.readLine().trim());
+      } else if (mealChoice.equals("skekmal's freshly hunted meats")) {
+        System.out.println("Each plate will cost $20. Please type 20 to confirm.");
+        Integer userMealChoice = Integer.parseInt(c.readLine().trim());
+      } else {
+        System.out.println("I'm sorry, I didn't understand your input.");
+      }
+      int userMealChoice = Integer.parseInt(c.readLine().trim());
+
+      System.out.println("What type of entertainment would you like at your event? Please type one of the following: urRu Band, Pod People DJ, Skeksis Noise Drone, or Garthrim Dancers");
+      String entertainmentChoice = c.readLine().trim().toLowerCase();
       int userChoiceEntertainment = Integer.parseInt(c.readLine().trim().toLowerCase());
       Event userEvent = new Event(totalPeopleSelection, userMealChoice, userChoiceEntertainment);
+      Integer userPricePerPerson = userEvent.attendance();
+      Integer userPricePerMeal = userEvent.costPerMeal();
+      System.out.println("Your party will entail the following with prices: " + userEvent);
     }
   }
 }
