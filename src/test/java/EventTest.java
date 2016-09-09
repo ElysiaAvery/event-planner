@@ -5,31 +5,31 @@ public class EventTest{
 
   @Test
   public void newEvent_createsObject_true() {
-    Event thisEvent = new Event();
+    Event userEvent = new Event();
     assertEquals(true, thisEvent instanceof Event);
   }
 
   @Test
   public void initialCost_createsInitialCost_250() {
-    Event thisEvent = new Event();
-    assertEquals(250, thisEvent.initialCost(250));
+    Event userEvent = new Event();
+    assertEquals(250, userEvent.initialCost(250));
   }
 
   @Test
   public void costPerPerson_increasesCostPerPerson_15() {
-    Event thisEvent = new Event();
+    Event userEvent = new Event();
     assertEquals(15, thisEvent.costPerPerson(15));
   }
 
   @Test
-  public void costPerPlate_increasesCostBasedOnFood_25() {
-    Event thisEvent = new Event();
-    assertEquals(25, thisEvent.costPerPlate(25));
+  public void costPerMeal_increasesCostBasedOnFood_userMealChoice() {
+    Event userEvent = new Event();
+    assertEquals(userMealChoice, userEvent.costPerMeal(userMealChoice));
   }
 
   @Test
   public void costPerEntertainment_increasesCostBasedOnEntertainment_250() {
-    Event thisEvent = new Event();
+    Event userEvent = new Event();
     assertEquals(250, thisEvent.costPerEntertainment(250));
   }
 }
