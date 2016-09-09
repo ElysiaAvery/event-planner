@@ -24,7 +24,12 @@ public class Event {
   }
 
   public int costPerPlate(int foodSelection) {
-    // return mBase.equals(foodSelection.mMeal() * totalPeopleSelection);
+    // return mBase.equals(foodSelection.mMeal * totalPeopleSelection);
     return 25;
+  }
+
+  public int costPerEntertainment(int entertainmentSelection) {
+    // returnmBase.equals(entertainmentSelection.mEntertainment;
+    return 0;
   }
 }

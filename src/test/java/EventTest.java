@@ -26,4 +26,10 @@ public class EventTest{
     Event thisEvent = new Event();
     assertEquals(25, thisEvent.costPerPlate(25));
   }
+
+  @Test
+  public void costPerEntertainment_increasesCostBasedOnEntertainment_250() {
+    Event thisEvent = new Event();
+    assertEquals(250, thisEvent.costPerEntertainment(250));
+  }
 }
