@@ -7,24 +7,24 @@ public class Event {
   private int mMeal = 25;
   private int mEntertainment = 250;
 
-  public Event(int person, int meal, int entertainment) {
-    mPerson = person;
-    mMeal = meal;
-    mEntertainment = entertainment;
-  }
+  // public Event(int person, int meal, int entertainment) {
+  //   mPerson = person;
+  //   mMeal = meal;
+  //   mEntertainment = entertainment;
+  // }
 
   public int initialCost(int userChoice) {
-    // return mBase = mCost + userChoice;
+    // return mBase.equals(mCost + userChoice);
     return 250;
   }
 
   public int costPerPerson(int totalPeopleSelection) {
-    // return mBase = totalPeopleSelection * mPerson;
+    // return mBase.equals(totalPeopleSelection * mPerson);
     return 15;
   }
 
   public int costPerPlate(int foodSelection) {
-    return mBase = foodSelection.mMeal() * totalPeopleSelection;
-    // return 25;
+    // return mBase.equals(foodSelection.mMeal() * totalPeopleSelection);
+    return 25;
   }
 }
