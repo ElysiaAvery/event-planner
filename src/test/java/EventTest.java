@@ -1,35 +1,37 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class EventTest{
 
   @Test
   public void newEvent_createsObject_true() {
-    Event userEvent = new Event();
-    assertEquals(true, thisEvent instanceof Event);
+    List<Event> userEvent = new ArrayList<Event>();
+    assertEquals(true, userEvent instanceof Event);
   }
 
   @Test
-  public void initialCost_createsInitialCost_250() {
-    Event userEvent = new Event();
-    assertEquals(250, userEvent.initialCost(250));
+  public void getCost_createsInitialCost_250() {
+    List<Event> userEvent = new ArrayList<Event>();
+    assertEquals(250, userEvent.getCost(250));
   }
 
   @Test
   public void costPerPerson_increasesCostPerPerson_15() {
-    Event userEvent = new Event();
-    assertEquals(15, thisEvent.costPerPerson(15));
+    List<Event> userEvent = new ArrayList<Event>();
+    assertEquals(15, userEvent.costPerPerson(15));
   }
 
   @Test
   public void costPerMeal_increasesCostBasedOnFood_15() {
-    Event userEvent = new Event();
+    List<Event> userEvent = new ArrayList<Event>();
     assertEquals(15, userEvent.costPerMeal(15));
   }
 
   @Test
   public void costPerEntertainment_increasesCostBasedOnEntertainment_250() {
-    Event userEvent = new Event();
-    assertEquals(250, thisEvent.costPerEntertainment(250));
+    List<Event> userEvent = new ArrayList<Event>();
+    assertEquals(250, userEvent.costPerEntertainment(250));
   }
 }
