@@ -4,6 +4,14 @@ public class Event {
   private int mBase = 0;
   private int mCost = 250;
   private int mPerson = 15;
+  private int mMeal = 25;
+  private int mEntertainment = 250;
+
+  public Event(int person, int meal, int entertainment) {
+    mPerson = person;
+    mMeal = meal;
+    mEntertainment = entertainment;
+  }
 
   public int initialCost(int userChoice) {
     // return mBase = mCost + userChoice;
@@ -16,7 +24,7 @@ public class Event {
   }
 
   public int costPerPlate(int foodSelection) {
-    // return mBase = foodSelection * totalPeopleSelection;
-    return 0;
+    return mBase = foodSelection.mMeal() * totalPeopleSelection;
+    // return 25;
   }
 }
