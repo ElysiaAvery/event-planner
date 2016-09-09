@@ -1,6 +1,8 @@
 import java.io.Console;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Arrays;
 
 public class App {
   public static void main(String[] args) {
@@ -9,17 +11,28 @@ public class App {
     Event bbq = new Event("Bar-B-Que", 10, 25, 200);
     Event birthday = new Event("Birthday Party", 10, 20, 300);
     Event wedding = new Event("Wedding Reception", 50, 30, 600);
+    Event costume = new Event("Costume Party", 20, 10, 200);
+    Event dog = new Event("Dog Birthday", 15, 15, 200);
+    Event pizza = new Event("Pizza Party", 15, 20, 200);
+    Event painting = new Event("Painting Party", 10, 10, 300);
     List<Event> allEvents = new ArrayList<Event>();
     allEvents.add(halloween);
     allEvents.add(bbq);
     allEvents.add(birthday);
     allEvents.add(wedding);
+    allEvents.add(costume);
+    allEvents.add(dog);
+    allEvents.add(pizza);
+    allEvents.add(painting);
+    String[] partyArray = {"Halloween", "Bar-B-Que", "Birthday Party", "Wedding Reception", "Costume Party", "Dog Birthday", "Pizza Party", "Painting Party"};
+    int idx = new Random().nextInt(partyArray.length);
+    String random = (partyArray[idx]);
 
     boolean programRunning = true;
 
     while (programRunning) {
       System.out.println("-------------------------------------------------");
-      System.out.println("Welcome to Thra event planning! We can help you plan your next event or party. Please type in one of the following so that we may assist you: Plan Party, Plan a Party For Me, or Exit");
+      System.out.println("Welcome to Thra event planning! We can help you plan your next event or party. Please type in one of the following so that we may assist you: Plan Party, All Parties, Choose a Random Party, or Exit");
       String navigationChoice = c.readLine().trim().toLowerCase();
 
       if (navigationChoice.equals("plan party")) {
@@ -65,7 +78,7 @@ public class App {
         System.out.println("Your catering cost is: " + userPricePerMeal);
         System.out.println("Your entertainment cost is: " + userPriceForEntertainment);
         System.out.println("Your total event cost is: " +  partyTotal);
-      } else if (navigationChoice.equals("plan a party for me")) {
+      } else if (navigationChoice.equals("all parties")) {
           for (Event individualEvent : allEvents) {
             System.out.println("-------------------------------------------------");
             System.out.println("This party will entail the following with prices:");
@@ -74,6 +87,8 @@ public class App {
             System.out.println("The cost per each meal is: $" + individualEvent.getMealType());
             System.out.println("The cost for entertainment at this event is: $" + individualEvent.getEntertainment());
           }
+      } else if (navigationChoice.equals("choose a random party")) {
+        System.out.println(random);
       } else if (navigationChoice.equals("exit")){
           programRunning = false;
       } else {
