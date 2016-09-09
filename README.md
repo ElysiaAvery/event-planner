@@ -1,5 +1,5 @@
 # Event Planner
-![project screenshot](/screenshot.jpg)
+![project screenshot](/screenshot.png)
 
 Version 0.0.0: September 9, 2016
 
