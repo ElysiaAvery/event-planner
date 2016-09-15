@@ -24,7 +24,7 @@ class Event {
     return ((mCost + (mPerson * 10)) + (mPerson * mMealType) + (mEntertainment));
   }
   public int getCost() {
-    return mCost = 250;
+    return mCost;
   }
   public String getName() {
     return mPartyName;
