@@ -7,31 +7,31 @@ public class EventTest{
 
   @Test
   public void newEvent_createsObject_true() {
-    List<Event> userEvent = new ArrayList<Event>();
-    assertEquals(true, userEvent instanceof Event);
+  Event userEvent = new Event("Birthday", 15, 15, 250);
+    assertTrue(userEvent instanceof Event);
   }
 
   @Test
-  public void getCost_createsInitialCost_250() {
-    List<Event> userEvent = new ArrayList<Event>();
-    assertEquals(250, userEvent.getCost(250));
+  public void getName_createsInitialCost_Birthday() {
+  Event userEvent = new Event("Birthday", 15, 15, 250);
+    assertEquals("Birthday", userEvent.getName());
   }
 
   @Test
-  public void costPerPerson_increasesCostPerPerson_15() {
-    List<Event> userEvent = new ArrayList<Event>();
-    assertEquals(15, userEvent.costPerPerson(15));
+  public void getPerson_increasesCostPerPerson_15() {
+  Event userEvent = new Event("Birthday", 15, 15, 100);
+    assertEquals(15, userEvent.getPerson());
   }
 
   @Test
-  public void costPerMeal_increasesCostBasedOnFood_15() {
-    List<Event> userEvent = new ArrayList<Event>();
-    assertEquals(15, userEvent.costPerMeal(15));
+  public void getMealType_increasesCostBasedOnFood_15() {
+  Event userEvent = new Event("Birthday", 15, 15, 250);
+    assertEquals(15, userEvent.getMealType());
   }
 
   @Test
-  public void costPerEntertainment_increasesCostBasedOnEntertainment_250() {
-    List<Event> userEvent = new ArrayList<Event>();
-    assertEquals(250, userEvent.costPerEntertainment(250));
+  public void getEntertainment_increasesCostBasedOnEntertainment_250() {
+  Event userEvent = new Event("Birthday", 15, 15, 250);
+    assertEquals(250, userEvent.getEntertainment());
   }
 }
